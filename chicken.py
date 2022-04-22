@@ -102,9 +102,9 @@ def plot_year1(df,year):
     Q = np.linspace(0.1, 100, 100)+.05
     #plotting the functions
     plt.plot(Q,np.exp(demand_curve(np,Q,y,pb))*cpi,  color = 'green', label = 'Etterpørsel kurve')
-    plt.plot(Q,np.exp(demand_curve(np,Q+0.5,y,pb))*cpi,  color = 'purple', label = 'Etterpørsel kurve')
-    plt.plot(Q,np.exp(demand_curve(np,Q,y+0.5,pb))*cpi,  color = 'brown', label = 'Etterpørsel kurve')
-    plt.plot(Q,np.exp(demand_curve(np,Q,y,pb+0.5))*cpi,  color = 'black', label = 'Etterpørsel kurve')
+    plt.plot(Q,np.exp(demand_curve(np,Q+0.5,y,pb))*cpi,  color = 'purple', label = 'Q + 0.5')
+    plt.plot(Q,np.exp(demand_curve(np,Q,y+0.5,pb))*cpi,  color = 'brown', label = 'inntekt + 0.5')
+    plt.plot(Q,np.exp(demand_curve(np,Q,y,pb+0.5))*cpi,  color = 'black', label = 'Biff + 0.5')
     plt.plot(Q,np.exp(supply_curve_long_run(np,Q,N,X,pf,t))*cpi,  color = 'red', label = 'Langsiktig tilbud')
     plt.plot(Q,np.exp(supply_curve_short_run(np,Q,N,X,pf,t,Q_fitted))*cpi,  color = 'blue', label = 'Kortsiktig tilbud')
     plt.xlabel('Enheter')
